@@ -276,6 +276,6 @@ B.Tech Electrical Engineering
 
 National Institute of Technology Silchar
 
-GitHub : https://github.com/yourusername
+GitHub : [https://github.com/yourusername](https://github.com/ankitjhuria159)
 
-LinkedIn : https://linkedin.com/in/yourprofile
+LinkedIn : [https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/ankit-jhuria-2aa293291/)

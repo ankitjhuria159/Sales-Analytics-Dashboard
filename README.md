@@ -1,262 +1,274 @@
-# 📊 Sales Analytics Dashboard | Power BI
+# Sales-Analytics-Dashboard
 
-> An interactive Business Intelligence dashboard built using **Power BI** to analyze sales performance, profitability, customer behavior, discounts, and product trends through dynamic visualizations, DAX calculations, and data modeling.
+### Dashboard Link : (Add your Power BI Dashboard Link here)
+
+## Problem Statement
+
+This dashboard helps **ElectroHub** analyze its sales performance and make data-driven business decisions. It enables stakeholders to identify top and bottom performing products, monitor sales trends, compare sales across different time periods, evaluate discount strategies, and analyze customer purchasing behavior.
+
+Using this dashboard, management can quickly identify profitable products, low-performing products, regional sales distribution, and sales trends over different time periods. Interactive filters allow users to drill down into product, customer, promotion, and date-level details for better business insights.
+
+The dashboard answers the following business questions:
+
+- Which are the Top 5 and Bottom 5 products based on Sales, Profit, and Quantity Sold?
+- How do sales trends vary daily, monthly, quarterly, and annually?
+- What is the relationship between Sales and Profit?
+- How do Sales, Profit, and Quantity Sold compare between two different periods?
+- What is the average discount offered in each discount category?
+- How many total orders have been placed?
+- How can users dynamically filter order-level information?
+- Which cities generate the highest sales?
 
 ---
 
-# 📌 Problem Statement
+# Steps Followed
 
-The objective of this project is to build an interactive **Sales Analytics Dashboard** for **ElectroHub** that helps business stakeholders analyze sales performance, profitability, customer orders, and discount trends. The dashboard addresses the following business questions:
+- Step 1 : Loaded the sales dataset into Power BI Desktop.
 
-### 1️⃣ Top & Bottom 5 Products
-- Identify the **Top 5 and Bottom 5 products** based on:
-  - Sales
-  - Profit
-  - Quantity Sold
+- Step 2 : Opened Power Query Editor and inspected the dataset using:
 
-### 2️⃣ Sales Trend Analysis
-Analyze how sales trends vary over time:
-- Daily
-- Monthly
-- Quarterly
-- Annually
+  - Column Quality
+  - Column Distribution
+  - Column Profile
 
-### 3️⃣ Sales vs Profit Analysis
-Visualize the relationship between **Sales** and **Profit**.
+- Step 3 : Changed profiling option to **Based on Entire Dataset** for complete data analysis.
 
-### 4️⃣ Period Comparison
-Compare:
-- Sales
-- Profit
-- Quantity Sold
+- Step 4 : Verified data types and cleaned unnecessary columns.
 
-between any two periods selected by the user.
+- Step 5 : Checked for duplicate records, blank values, and inconsistencies before loading the dataset.
 
-### 5️⃣ Discount Analysis
-Calculate the average discount offered in each discount category.
+- Step 6 : Designed a **Star Schema** by creating relationships between the Fact Table and Dimension Tables.
 
-### 6️⃣ Total Orders
-Display the total number of orders.
+- Step 7 : Created separate Date Tables for advanced time intelligence calculations.
 
-### 7️⃣ Detailed Order Report
-Display detailed information for every order including:
-- Sales
-- Profit
-- Discount
+- Step 8 : Built DAX Measures including:
+
+```DAX
+Total Sales =
+SUM('Fact Table'[Sales])
+
+Total Profit =
+SUM('Fact Table'[Profit])
+
+Quantity Sold =
+SUM('Fact Table'[Units Sold])
+
+Net Sales =
+SUM('Fact Table'[Net Sales])
+```
+
+- Step 9 : Created additional DAX measures using:
+
+```
+CALCULATE()
+USERELATIONSHIP()
+ALL()
+SUM()
+FILTER()
+```
+
+to perform advanced date comparisons and KPI calculations.
+
+- Step 10 : Created KPI Cards for:
+
+- Total Sales
 - Net Sales
+- Total Profit
+- Quantity Sold
+- Total Orders
 
-with interactive filtering using:
+- Step 11 : Added interactive slicers for:
+
 - Product
 - Date
 - Customer ID
 - Promotion Category
 
-### 8️⃣ City-wise Sales Analysis
-Analyze sales performance across different cities.
+- Step 12 : Created visualizations including:
+
+- Line Chart
+- Clustered Bar Chart
+- Scatter Plot
+- Map Visual
+- Table Visual
+- KPI Cards
+
+- Step 13 : Built a dashboard for identifying Top 5 and Bottom 5 Products based on:
+
+- Sales
+- Profit
+- Quantity Sold
+
+- Step 14 : Created a Sales Trend Dashboard for analyzing:
+
+- Daily Sales
+- Monthly Sales
+- Quarterly Sales
+- Yearly Sales
+
+- Step 15 : Built a Scatter Chart to analyze the relationship between Sales and Profit.
+
+- Step 16 : Created comparison visuals allowing users to compare:
+
+- Sales
+- Profit
+- Quantity Sold
+
+between two selected periods.
+
+- Step 17 : Designed a detailed transaction report displaying:
+
+- Sales
+- Profit
+- Discount
+- Net Sales
+- Customer Information
+- Product Information
+
+with interactive filtering.
+
+- Step 18 : Added a Map Visual to analyze city-wise sales performance.
+
+- Step 19 : Applied a professional dashboard theme with consistent colors, icons, and formatting.
+
+- Step 20 : Enabled drill-down, cross-filtering, and interactive report navigation.
+
+- Step 21 : Saved the report as a Power BI (.pbix) project.
 
 ---
 
-# 🎯 Objectives
+# Dashboard Snapshot
 
-- Build an interactive Business Intelligence Dashboard.
-- Transform raw sales data into meaningful business insights.
-- Create dynamic visualizations for decision making.
-- Perform advanced calculations using DAX.
-- Demonstrate data modeling using a Star Schema.
-- Enable interactive filtering and drill-down analysis.
+## Overview Dashboard
+
+<img width="1379" height="747" alt="Image" src="https://github.com/user-attachments/assets/e11cc7cb-d7a1-4024-81f6-8cbc09e4ea37" />
 
 ---
 
-# 🚀 Features
-
-- 📈 Interactive KPI Cards
-- 📊 Sales Trend Analysis
-- 💰 Profit Analysis
-- 📦 Quantity Sold Analysis
-- 🏆 Top & Bottom 5 Products
-- 🌍 Geographic Sales Analysis
-- 🏷️ Discount Analysis
-- 📅 Time Intelligence Analysis
-- 🎛️ Dynamic Slicers & Filters
-- 🔍 Drill-down & Cross Filtering
-- 📋 Detailed Transaction Report
+## Top & Bottom 5 Products
+<img width="1176" height="718" alt="Image" src="https://github.com/user-attachments/assets/6b4a635c-7313-4ade-80f9-f51798dbf238" />
 
 ---
 
-# 🛠️ Tech Stack
-
-| Tool | Purpose |
-|------|---------|
-| Microsoft Power BI | Dashboard Development |
-| Power Query | Data Cleaning & Transformation |
-| DAX | Business Calculations |
-| Star Schema | Data Modeling |
-| Excel/CSV Dataset | Data Source |
+## Sales Trend Dashboard
+<img width="1167" height="713" alt="Image" src="https://github.com/user-attachments/assets/16615c91-2c15-45b2-9955-0ea1953e2bad" />
 
 ---
 
-# 📊 Dashboard Pages
+## Detailed Report
 
-## 📈 Overview Dashboard
-
-- Sales KPI Cards
-- Monthly Sales Trend
-- Profit Trend
-- Regional Sales Map
-- Product Performance
+<img width="1142" height="661" alt="Image" src="https://github.com/user-attachments/assets/22de1a2a-60c0-4fda-8eb5-727a80cfa583" />
 
 ---
 
-## 🏆 Top & Bottom 5 Analysis
+# Insights
 
-- Top 5 Products by Sales
-- Bottom 5 Products by Sales
-- Top 5 Products by Profit
-- Bottom 5 Products by Profit
-- Quantity Sold Comparison
+The dashboard provides valuable business insights including:
 
----
+### [1] Product Performance
 
-## 📊 Interactive Analysis
-
-- Dynamic Date Filters
-- Period Comparison
-- Sales & Profit Analysis
-- Category-wise Performance
+- Identify Top 5 products by Sales.
+- Identify Bottom 5 products by Sales.
+- Identify Top 5 products by Profit.
+- Identify Bottom 5 products by Profit.
+- Compare products based on Quantity Sold.
 
 ---
 
-## 📋 Detailed Report
+### [2] Sales Trend Analysis
 
-- Order-Level Data
-- Interactive Slicers
-- Customer-wise Analysis
-- Product-wise Analysis
-- Promotion Category Filters
+Analyze sales across:
 
----
+- Daily
+- Monthly
+- Quarterly
+- Annually
 
-# 📊 Key Performance Indicators (KPIs)
-
-- 💰 Total Sales
-- 💵 Net Sales
-- 📈 Total Profit
-- 📦 Quantity Sold
-- 🛒 Total Orders
-- 🏷️ Average Discount
+to identify seasonal trends and business growth.
 
 ---
 
-# 🧠 DAX Functions Used
+### [3] Sales vs Profit
 
-```DAX
-CALCULATE()
-SUM()
-ALL()
-USERELATIONSHIP()
-FILTER()
-DIVIDE()
-COUNTROWS()
-```
+Analyze the relationship between Sales and Profit to identify highly profitable and low-margin products.
 
 ---
 
-# 📂 Data Model
+### [4] Period Comparison
 
-This project follows a **Star Schema** data model consisting of:
+Users can compare:
 
-- Fact Table
-- Date Table
-- Product Table
-- Customer Table
+- Sales
+- Profit
+- Quantity Sold
 
-The model improves query performance and enables efficient DAX calculations.
-
----
-
-# 📈 Business Insights
-
-- Identified the highest and lowest performing products.
-- Compared profitability across different categories.
-- Analyzed sales trends over multiple time periods.
-- Measured discount impact on sales.
-- Evaluated regional sales performance.
-- Built an interactive dashboard for data-driven business decisions.
+between any two selected periods for better performance analysis.
 
 ---
 
-# 📸 Dashboard Preview
+### [5] Discount Analysis
 
-> Add screenshots of each dashboard page here.
-
-### 📈 Overview Dashboard
-
-*(Insert Screenshot Here)*
+Analyze average discounts across different discount categories to understand promotional effectiveness.
 
 ---
 
-### 🏆 Top & Bottom 5 Analysis
+### [6] Order Analysis
 
-*(Insert Screenshot Here)*
+Monitor:
 
----
+- Total Orders
+- Net Sales
+- Profit
+- Discount
 
-### 📊 Interactive Analysis
-
-*(Insert Screenshot Here)*
-
----
-
-### 📋 Detailed Report
-
-*(Insert Screenshot Here)*
+for every order using dynamic filters.
 
 ---
 
-# 📁 Project Structure
+### [7] Geographic Analysis
 
-```
-Sales-Analytics-Dashboard
-│
-├── PowerBi Project.pbix
-├── Dataset.xlsx
-├── Images
-│   ├── Overview.png
-│   ├── TopBottom.png
-│   ├── Interactive.png
-│   └── DetailedReport.png
-└── README.md
-```
+Identify cities contributing the highest sales and compare regional business performance.
 
 ---
 
-# 🎯 Skills Demonstrated
+### [8] Interactive Dashboard Features
+
+- Dynamic Slicers
+- Drill Down
+- Cross Filtering
+- Interactive KPIs
+- Responsive Visualizations
+
+allow users to explore business data efficiently.
+
+---
+
+# Tools & Technologies Used
+
+- Microsoft Power BI
+- Power Query
+- DAX (Data Analysis Expressions)
+- Star Schema Data Modeling
+- Excel Dataset
+
+---
+
+# Skills Demonstrated
 
 - Data Cleaning
 - Data Transformation
 - Data Modeling
-- Star Schema Design
 - DAX Calculations
 - Power Query
-- Interactive Dashboard Design
+- Dashboard Design
+- KPI Development
 - Business Intelligence
 - Data Visualization
-- KPI Development
 - Analytical Thinking
 
 ---
 
-# 📌 Future Improvements
-
-- Forecasting using Time Intelligence
-- Customer Segmentation
-- Sales Prediction
-- Dynamic What-if Parameters
-- AI Visual Integration
-
----
-
-# 👨‍💻 Author
+# Author
 
 **Ankit Jhuria**
 
@@ -264,10 +276,6 @@ B.Tech Electrical Engineering
 
 National Institute of Technology Silchar
 
-GitHub: https://github.com/yourusername
+GitHub : https://github.com/yourusername
 
-LinkedIn: https://linkedin.com/in/yourprofile
-
----
-
-⭐ If you found this project useful, don't forget to star the repository!
+LinkedIn : https://linkedin.com/in/yourprofile

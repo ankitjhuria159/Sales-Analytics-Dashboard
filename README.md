@@ -1,6 +1,5 @@
 # Sales-Analytics-Dashboard
 
-### Dashboard Link : (Add your Power BI Dashboard Link here)
 
 ## Problem Statement
 
